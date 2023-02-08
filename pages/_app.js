@@ -34,7 +34,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   // Wagmi client
   const { provider } = configureChains(chains, [
-    walletConnectProvider({ projectId: "975c8083f289784b047e6053f547a5a3" }),
+    walletConnectProvider({ projectId: process.env.NEXT_PUBLIC_PROJECT_ID }),
   ]);
   const wagmiClient = createClient({
     autoConnect: true,
@@ -54,7 +54,7 @@ const MyApp = ({ Component, pageProps }) => {
         </WagmiConfig>
       </ChakraProvider>
       <Web3Modal
-        projectId="975c8083f289784b047e6053f547a5a3"
+        projectId= {process.env.NEXT_PUBLIC_PROJECT_ID}
         ethereumClient={ethereumClient}
       
       />

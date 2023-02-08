@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import Contract from "../artifacts/contracts/Confesster.sol/Confesster.json";
+import Contract from "./Confesster.json";
 import { contractAddress } from "../config";
 
 export default function getContract() {
